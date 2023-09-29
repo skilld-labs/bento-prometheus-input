@@ -110,7 +110,7 @@ func (p *prometheusInput) handleHTTPRequest() func(w http.ResponseWriter, r *htt
 				})
 				if err != nil {
 					p.logger.Errorf("Prometheus Input: error while marshalling metric: %w", err)
-					http.Error(w, err.Error(), http.StatusBadRequest)
+					http.Error(w, err.Error(), http.StatusInternalServerError)
 					return
 				}
 				mm = append(mm, service.NewMessage(m))
@@ -122,7 +122,7 @@ func (p *prometheusInput) handleHTTPRequest() func(w http.ResponseWriter, r *htt
 		close(ack)
 		if err != nil {
 			p.logger.Errorf("Prometheus Input: ack returned an error: %w", err)
-			http.Error(w, err.Error(), http.StatusBadRequest)
+			http.Error(w, err.Error(), http.StatusInternalServerError)
 			return
 		}
 		p.logger.Debug("Prometheus Input: request has been handle correctly")
