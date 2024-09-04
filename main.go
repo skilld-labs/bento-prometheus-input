@@ -5,8 +5,8 @@ import (
 
 	_ "benthos-prometheus-input/input"
 
-	_ "github.com/benthosdev/benthos/v4/public/components/all"
-	"github.com/benthosdev/benthos/v4/public/service"
+	_ "github.com/redpanda-data/connect/v4/public/components/all"
+	"github.com/redpanda-data/benthos/v4/public/service"
 )
 
 func main() {
