@@ -1,2 +1,2 @@
-# benthos-prometheus-input
-A benthos input for prometheus
+# bento-prometheus-input
+A bento input for prometheus
