@@ -8,8 +8,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/redpanda-data/benthos/v4/public/service"
 	"github.com/prometheus/prometheus/storage/remote"
+	"github.com/warpstreamlabs/bento/public/service"
 )
 
 var prometheusConfigSpec = service.NewConfigSpec().

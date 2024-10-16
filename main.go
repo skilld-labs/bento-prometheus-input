@@ -3,10 +3,10 @@ package main
 import (
 	"context"
 
-	_ "benthos-prometheus-input/input"
+	_ "bento-prometheus-input/input"
 
-	_ "github.com/redpanda-data/connect/v4/public/components/all"
-	"github.com/redpanda-data/benthos/v4/public/service"
+	_ "github.com/warpstreamlabs/bento/public/components/all"
+	"github.com/warpstreamlabs/bento/public/service"
 )
 
 func main() {
